@@ -11,6 +11,7 @@
         v-else-if="
           vrijemeData.weather[0].description === 'rain' ||
           vrijemeData.weather[0].description === 'heavy intensity rain' ||
+          vrijemeData.weather[0].description === 'moderate rain' ||
           vrijemeData.weather[0].description === 'shower rain'
         "
         class="text-8xl"
