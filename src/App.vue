@@ -29,7 +29,7 @@ const getWeather = async (city) => {
   }
   const data = await res.json();
   vrijemeData.value = data;
-  console.log(apiKey);
+
   console.log(data);
 };
 </script>
