@@ -26,6 +26,7 @@ const emit = defineEmits(["emitCity"]);
 const sendCity = () => {
   emit("emitCity", cityInput.value);
   console.log(cityInput.value);
+  cityInput.value = "";
 };
 
 const cityInput = ref("");
