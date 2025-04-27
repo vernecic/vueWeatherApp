@@ -24,7 +24,7 @@ const getWeather = async (city) => {
   const res = await fetch(url);
   console.log("Res: ", res);
   if (!res.ok) {
-    console.error("There is an error");
+    console.error("There is an error", res.statusText);
     return;
   }
   const data = await res.json();
