@@ -8,7 +8,11 @@
         ☀️
       </div>
       <div
-        v-else-if="vrijemeData.weather[0].description === 'rain'"
+        v-else-if="
+          vrijemeData.weather[0].description === 'rain' ||
+          vrijemeData.weather[0].description === 'heavy intensity rain' ||
+          vrijemeData.weather[0].description === 'shower rain'
+        "
         class="text-8xl"
       >
         🌧️
@@ -47,14 +51,7 @@
       >
         ☁️
       </div>
-      <div
-        v-else-if="
-          vrijemeData && vrijemeData.weather[0].description === 'shower rain'
-        "
-        class="text-8xl"
-      >
-        🌧️
-      </div>
+
       <div
         v-else-if="
           vrijemeData && vrijemeData.weather[0].description === 'thunderstorm'
