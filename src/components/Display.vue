@@ -79,7 +79,7 @@
       </div>
 
       <div class="mt-5 text-2xl">
-        {{ vrijemeData.name }}, {{ vrijemeData.sys.country }}
+        <div>{{ displayCity }}, {{ vrijemeData.sys.country }}</div>
       </div>
     </div>
     <div class="text-2xl">{{ Math.round(vrijemeData.main.feels_like) }}°C</div>
@@ -98,7 +98,18 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+
 const props = defineProps({
   vrijemeData: Object,
+  /* forecastData: Object, */
+});
+
+const displayCity = computed(() => {
+  if (props.vrijemeData.name.trim() === "Donji grad") {
+    return "Zagreb";
+  } else {
+    return props.vrijemeData.name;
+  }
 });
 </script>
